@@ -44,17 +44,16 @@ const Nav = () => {
         </div>
 
 
-        <div className={`${toggle ? "hidden" : "flex-center"} absolute top-5 right-5 flex-col gap-5`}>
-          <ul>
+          <ul  className={`${toggle ? "hidden" : "flex-center"} md:hidden absolute top-[60px] right-5 flex-col rounded-md padding-x gap-7 border border-gray-300 z-50 `}>
             {navLinks.map((item) => (
-              <li key={item.label} className="list-none">
+              <li key={item.label} className="list-none ">
                 <a href={item.href} className='font-montserrat leading-normal text-lg text-slate-gray'>
                   {item.label}
                 </a>
               </li>
             ))}
           </ul>
-        </div>
+     
 
 
       </nav>
