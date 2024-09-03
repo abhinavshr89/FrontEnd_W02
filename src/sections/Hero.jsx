@@ -18,7 +18,7 @@ const Hero = () => {
           Our Summer collections
         </p>
 
-        <h1 className='mt-10 font-palanquin text-8xl max-sm:text-[72px] max-sm:leading-[82px] font-bold'>
+        <h1 className='mt-10 font-palanquin text-8xl max-sm:text-[50px] max-sm:leading-[60px] font-bold'>
           <span className='xl:bg-white xl:whitespace-nowrap relative z-10 pr-10'>
             The New Arrival
           </span>
@@ -29,8 +29,9 @@ const Hero = () => {
           Discover stylish Nike arrivals, quality comfort, and innovation for
           your active life.
         </p>
-
-        <Button label='Shop now' iconURL={arrowRight} />
+        <div className=" max-sm:mt-[-20px]">
+          <Button label='Shop now' iconURL={arrowRight} />
+        </div>
 
         <div className='flex justify-start items-start flex-wrap w-full mt-20 gap-16'>
           {statistics.map((stat, index) => (
@@ -43,7 +44,7 @@ const Hero = () => {
           ))}
         </div>
       </div>
-       {/* Shoes section */}
+      {/* Shoes section */}
       <div className='relative flex-1 flex justify-center items-center xl:min-h-screen max-xl:py-40 bg-primary bg-hero bg-cover bg-center'>
         <img
           src={bigShoeImg}

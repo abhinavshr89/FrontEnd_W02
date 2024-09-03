@@ -5,7 +5,7 @@ import { useState } from "react";
 const Nav = () => {
   const [toggle, setToggle] = useState(false)
   return (
-    <header className='padding-x py-8 absolute z-10 w-full'>
+    <header className='padding-x py-8 absolute z-50 w-full'>
       <nav className='flex justify-between items-center max-container'>
         <a href='/'>
           <img
@@ -44,7 +44,7 @@ const Nav = () => {
         </div>
 
 
-          <ul  className={`${toggle ? "hidden" : "flex-center"} md:hidden absolute top-[60px] right-5 flex-col rounded-md padding-x gap-7 border border-gray-300 z-50 `}>
+          <ul  style={{ zIndex: 1000 }} className={`${!toggle ? "hidden" : "flex-center"} bg-white md:hidden absolute top-[60px] right-5 flex-col rounded-md padding-x gap-7 border border-gray-300 z-50 `}>
             {navLinks.map((item) => (
               <li key={item.label} className="list-none ">
                 <a href={item.href} className='font-montserrat leading-normal text-lg text-slate-gray'>
