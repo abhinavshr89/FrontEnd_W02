@@ -28,7 +28,7 @@ const PopularProductCard = ({ imgURL, name, price }) => {
           start: "top 70%",
           end: "bottom 20%",
           once: true, // Animation will only play once
-          markers: true, // Remove or set to false in production
+         
         },
       }
     );
