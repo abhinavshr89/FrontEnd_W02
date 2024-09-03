@@ -39,7 +39,7 @@ const App = () => {
 
   return (
     <main className="relative main w-[100%] h-[100%]">
-      <div style={{zIndex:1000000000}} id="cursor" className=" fixed bg-coral-red h-[40px] w-[40px] rounded-full opacity-70">
+      <div style={{zIndex:1000000000}} id="cursor" className="max-sm:hidden fixed bg-coral-red h-[40px] w-[40px] rounded-full opacity-70">
 
       </div>
       <Nav />
