@@ -17,13 +17,33 @@ const App = () => {
   useEffect(() => {
     const cursor = document.getElementById("cursor");
     const main = document.querySelector(".main");
+    const imageContainer = document.querySelector("#image-container");
 
     const moveCursor = (dets) => {
       gsap.to(cursor, {
         x: dets.clientX,
         y: dets.clientY,
-        scale: 0.8,
         ease: "back.out"
+      });
+    };
+
+    const handleClick = () => {
+      console.log("I have clicked on the image");
+    };
+
+    const handleMouseEnter = () => {
+      cursor.innerHTML = "View More";
+      gsap.to(cursor, {
+        scale:2,
+        duration: 0.3 // Optional: Adds a smooth transition
+      });
+    };
+
+    const handleMouseLeave = () => {
+      cursor.innerHTML = "";
+      gsap.to(cursor, {
+        scale: 1, // Set to 1 instead of 0 to maintain visibility
+        duration: 0.3 // Optional: Adds a smooth transition
       });
     };
 
@@ -31,10 +51,21 @@ const App = () => {
       main.addEventListener("mousemove", moveCursor);
     }
 
-    // Cleanup function to remove event listener when component unmounts
+    if (imageContainer) {
+      imageContainer.addEventListener("click", handleClick);
+      imageContainer.addEventListener("mouseenter", handleMouseEnter);
+      imageContainer.addEventListener("mouseleave", handleMouseLeave);
+    }
+
+    // Cleanup function to remove event listeners when component unmounts
     return () => {
       if (main) {
         main.removeEventListener("mousemove", moveCursor);
+      }
+      if (imageContainer) {
+        imageContainer.removeEventListener("click", handleClick);
+        imageContainer.removeEventListener("mouseenter", handleMouseEnter);
+        imageContainer.removeEventListener("mouseleave", handleMouseLeave);
       }
     };
   }, []);

@@ -24,6 +24,12 @@ import thumbnailShoe3 from './thumbnail-shoe3.svg'
 import redshoe from "./redshoe.avif"
 import pinkshoe from "./pinkshoe.avif"
 import orangeshoe from "./orangehshoe.avif"
+import blackshoes from "./blackshoes.avif"
+import greenshoes from "./greenshoes.png"
+import yellowshoes from "./yellowshoes.png"
+import blackdrift from "./blackdrift.png"
+import bluedrift from "./bluedrift.png"
+import whitesandle from "./whitesandle.png"
 export {
     bigShoe1,
     bigShoe2,
@@ -49,5 +55,11 @@ export {
 
     pinkshoe,
     orangeshoe,
-    redshoe
+    redshoe,
+    blackshoes,
+    greenshoes,
+    yellowshoes,
+    blackdrift,
+    bluedrift,
+    whitesandle
 }
