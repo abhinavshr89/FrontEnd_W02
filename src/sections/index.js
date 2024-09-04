@@ -6,7 +6,7 @@ import SpecialOffer from "./SpecialOffer";
 import CustomerReviews from "./CustomerReviews";
 import Subscribe from "./Subscribe";
 import Footer from "./Footer";
-
+import Experience from "./Experience";
 export {
     Hero,
     PopularProducts,
@@ -15,5 +15,6 @@ export {
     SpecialOffer,
     CustomerReviews,
     Subscribe,
-    Footer
+    Footer,
+    Experience
 }

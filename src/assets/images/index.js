@@ -21,6 +21,9 @@ import thumbnailShoe1 from './thumbnail-shoe1.svg'
 import thumbnailShoe2 from './thumbnail-shoe2.svg'
 import thumbnailShoe3 from './thumbnail-shoe3.svg'
 
+import redshoe from "./redshoe.avif"
+import pinkshoe from "./pinkshoe.avif"
+import orangeshoe from "./orangehshoe.avif"
 export {
     bigShoe1,
     bigShoe2,
@@ -42,5 +45,9 @@ export {
     thumbnailBackground,
     thumbnailShoe1,
     thumbnailShoe2,
-    thumbnailShoe3
+    thumbnailShoe3,
+
+    pinkshoe,
+    orangeshoe,
+    redshoe
 }
