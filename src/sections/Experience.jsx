@@ -18,7 +18,7 @@ const Experience = () => {
         scrub: true,
         pin: true,
         pinSpacing: true,
-        markers: true,
+        
       }
     });
   });
