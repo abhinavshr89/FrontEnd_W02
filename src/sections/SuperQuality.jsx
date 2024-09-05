@@ -39,7 +39,34 @@ const SuperQuality = () => {
         },
       }
     );
+
+
+    gsap.to(".overlay-sq-1",{
+      y: "100%", // Moves the overlay down by 100% of its height
+     
+      duration:2,
+      scrollTrigger: {
+        trigger: ".overlay-container",  // Target the overlay element
+        start: "top center",  // When the top of the overlay hits the center of the viewport
+        end: "bottom top",    // Animation ends when the bottom of the overlay reaches the top of the viewport
+      
+      },
+    })
+
+    
+    gsap.to(".overlay-sq-2",{
+      y: "-100%", // Moves the overlay down by 100% of its height
+     
+      duration:2,
+      scrollTrigger: {
+        trigger: ".overlay-container",  // Target the overlay element
+        start: "top center",  // When the top of the overlay hits the center of the viewport
+        end: "bottom top",    // Animation ends when the bottom of the overlay reaches the top of the viewport
+      
+      },
+    })
   });
+  
   
 
   return (
@@ -66,7 +93,11 @@ const SuperQuality = () => {
         </div>
       </div>
 
-      <div className='flex-1 flex justify-center items-center'>
+      <div className='flex-1 flex justify-center items-center relative'>
+      <div className="w-[100%] h-[100%] absolute flex z-10 overlay-container overflow-hidden">
+          <div className="overlay-sq-1 w-[50%] h-[100%] bg-white"></div>
+          <div className="overlay-sq-2 w-[50%] h-[100%] bg-white"></div>
+        </div>
         <img
           id="super-image"
           src={shoe8}
