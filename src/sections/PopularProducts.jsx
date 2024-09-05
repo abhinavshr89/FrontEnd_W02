@@ -29,7 +29,7 @@ const PopularProducts = () => {
       </div>
 
 
-      <div className='mt-16 grid lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-5 product-cards ' >
+      <div className='mt-16 grid lg:grid-cols-4 md:grid-cols-3 max-sm:grid-cols-2  gap-5 product-cards ' >
       {products.map((product) => (
           <PopularProductCard  key={product.name} {...product} />
         ))}
