@@ -17,14 +17,14 @@ const Experience = () => {
         end: '+=200% bottom', // Increase the end position to extend the scroll area
         scrub: true,
         pin: true,
-        pinSpacing: true,
+        // pinSpacing: true,
         
       }
     });
   });
 
   return (
-    <section id='image-section' className='h-screen overflow-hidden relative z-10'>
+    <section id='image-section' className='h-screen overflow-hidden relative '>
       <div id='image-container' className='flex w-[300vw]'>
         <div className='w-screen h-screen flex items-center justify-center'>
           <img src={redshoe} className='w-[50%]  object-contain ' alt="Pink Shoe" />
